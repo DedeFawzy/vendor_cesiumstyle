@@ -40,30 +40,30 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/pixelstyle/media/bootanimation_720.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/cesiumstyle/media/bootanimation_720.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/pixelstyle/media/bootanimation_1080.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/cesiumstyle/media/bootanimation_1080.zip:system/media/bootanimation.zip
 else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += vendor/pixelstyle/media/bootanimation_1440.zip:system/media/bootanimation.zip
+     PRODUCT_COPY_FILES += vendor/cesiumstyle/media/bootanimation_1440.zip:system/media/bootanimation.zip
 else
-     $(warning "PixelStyle: TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
-     PRODUCT_COPY_FILES += vendor/pixelstyle/media/bootanimation_1080.zip:system/media/bootanimation.zip
+     $(warning "cesiumstyle: TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
+     PRODUCT_COPY_FILES += vendor/cesiumstyle/media/bootanimation_1080.zip:system/media/bootanimation.zip
 endif
 
 # Fonts
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
-    vendor/pixelstyle/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
-    vendor/pixelstyle/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
-    vendor/pixelstyle/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
-    vendor/pixelstyle/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
-    vendor/pixelstyle/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
+    vendor/cesiumstyle/fonts/GoogleSans-Regular.ttf:system/fonts/GoogleSans-Regular.ttf \
+    vendor/cesiumstyle/fonts/GoogleSans-Medium.ttf:system/fonts/GoogleSans-Medium.ttf \
+    vendor/cesiumstyle/fonts/GoogleSans-MediumItalic.ttf:system/fonts/GoogleSans-MediumItalic.ttf \
+    vendor/cesiumstyle/fonts/GoogleSans-Italic.ttf:system/fonts/GoogleSans-Italic.ttf \
+    vendor/cesiumstyle/fonts/GoogleSans-Bold.ttf:system/fonts/GoogleSans-Bold.ttf \
+    vendor/cesiumstyle/fonts/GoogleSans-BoldItalic.ttf:system/fonts/GoogleSans-BoldItalic.ttf
 
-ADDITIONAL_FONTS_FILE := vendor/pixelstyle/fonts/google-sans.xml
+ADDITIONAL_FONTS_FILE := vendor/cesiumstyle/fonts/google-sans.xml
 
 # Pixel sysconfig
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
+    vendor/cesiumstyle/etc/sysconfig/pixel.xml:system/etc/sysconfig/pixel.xml
 
 # Set Pixel blue light theme on Gboard
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -71,21 +71,21 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Markup libs
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/lib/libsketchology_native.so:system/lib/libsketchology_native.so
+    vendor/cesiumstyle/lib/libsketchology_native.so:system/lib/libsketchology_native.so
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
+    vendor/cesiumstyle/lib64/libsketchology_native.so:system/lib64/libsketchology_native.so
 endif
 
 # Include package overlays
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/pixelstyle/overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/cesiumstyle/overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/pixelstyle/overlay/common/
+    vendor/cesiumstyle/overlay/common/
 
 # Weather
 PRODUCT_COPY_FILES += \
-    vendor/pixelstyle/etc/permissions/org.pixelexperience.ambient.play.xml:system/etc/permissions/org.pixelexperience.ambient.play.xml \
-    vendor/pixelstyle/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-    vendor/pixelstyle/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml \
-    vendor/pixelstyle/etc/default-permissions/org.pixelexperience.ambient.play.provider.xml:system/etc/default-permissions/org.pixelexperience.ambient.play.provider.xml
+    vendor/cesiumstyle/etc/permissions/org.cesium.ambient.play.xml:system/etc/permissions/org.cesium.ambient.play.xml \
+    vendor/cesiumstyle/etc/permissions/org.cesium.weather.client.xml:system/etc/permissions/org.cesium.weather.client.xml \
+    vendor/cesiumstyle/etc/default-permissions/org.cesium.weather.client.xml:system/etc/default-permissions/org.cesium.weather.client.xml \
+    vendor/cesiumstyle/etc/default-permissions/org.cesium.ambient.play.provider.xml:system/etc/default-permissions/org.cesium.ambient.play.provider.xml
