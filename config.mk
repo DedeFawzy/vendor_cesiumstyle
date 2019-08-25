@@ -17,7 +17,7 @@ PRODUCT_PACKAGES += \
     AmbientPlayProvider \
     SoundPickerPrebuilt \
     WallpaperPickerGooglePrebuilt \
-    NexusLauncherPrebuilt \
+    Lawnchair \
     WellbeingPrebuilt \
     MarkupGoogle \
     WeatherClient
@@ -89,3 +89,8 @@ PRODUCT_COPY_FILES += \
     vendor/cesiumstyle/etc/permissions/org.cesium.weather.client.xml:system/etc/permissions/org.cesium.weather.client.xml \
     vendor/cesiumstyle/etc/default-permissions/org.cesium.weather.client.xml:system/etc/default-permissions/org.cesium.weather.client.xml \
     vendor/cesiumstyle/etc/default-permissions/org.cesium.ambient.play.provider.xml:system/etc/default-permissions/org.cesium.ambient.play.provider.xml
+
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    vendor/cesiumstyle/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    vendor/cesiumstyle/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml

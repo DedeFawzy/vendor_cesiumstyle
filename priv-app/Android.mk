@@ -38,9 +38,9 @@ LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE := NexusLauncherPrebuilt
+LOCAL_MODULE := Lawnchair
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := NexusLauncherPrebuilt/NexusLauncherPrebuilt.apk
+LOCAL_SRC_FILES := LawnchairLauncher/Lawnchair.apk
 LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_MODULE_CLASS := APPS
 LOCAL_PRIVILEGED_MODULE := true
