@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
     AmbientPlayProvider \
     SoundPickerPrebuilt \
     WallpaperPickerGooglePrebuilt \
+    Music \
     Lawnchair \
     WellbeingPrebuilt \
     MarkupGoogle \
