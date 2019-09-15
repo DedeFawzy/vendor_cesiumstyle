@@ -21,7 +21,9 @@ PRODUCT_PACKAGES += \
     Lawnchair \
     WellbeingPrebuilt \
     MarkupGoogle \
-    WeatherClient
+    WeatherClient \
+    SubstratumSignature
+
 
 ifeq ($(TARGET_GAPPS_ARCH),arm64)
 PRODUCT_PACKAGES += \
